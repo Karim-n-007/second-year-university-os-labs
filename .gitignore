@@ -1,0 +1,23 @@
+.env
+
+.vscode/
+.idea/
+
+.DS_Store
+
+# Java compiled artifacts
+*.class
+*.jar
+
+# lab3 runtime-generated files (logs, PID, IPC, reports)
+lab3/process-wather/runtime/logs/*
+lab3/process-wather/runtime/run/*
+lab3/process-wather/runtime/ipc/*
+lab3/process-wather/runtime/input/events.txt
+lab3/process-wather/runtime/reports/*
+lab3/process-wather/cron/*.generated
+lab3/process-wather/build/classes/
+lab3/process-wather/build/*.jar
+
+# Keep placeholder files
+!**/.gitkeep

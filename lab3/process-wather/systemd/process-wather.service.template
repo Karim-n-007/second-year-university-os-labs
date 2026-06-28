@@ -1,0 +1,20 @@
+[Unit]
+Description=Process Wather Service
+
+[Service]
+Type=simple
+User=__WATCHER_USER__
+Group=__WATCHER_GROUP__
+WorkingDirectory=__PROJECT_DIR__
+EnvironmentFile=__ENV_FILE__
+ExecStart=__PROJECT_DIR__/scripts/run_foreground.sh
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=2
+StandardOutput=journal
+StandardError=journal
+KillSignal=SIGTERM
+TimeoutStopSec=20
+
+[Install]
+WantedBy=multi-user.target
